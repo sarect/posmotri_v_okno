@@ -38,6 +38,10 @@ ol {
   list-style: none;
 }
 
+li:not(:last-child) {
+  padding-bottom: 30px;
+}
+
 .content {
   display: flex;
   justify-content: center;
@@ -82,6 +86,10 @@ ol {
   align-items: flex-start;
   gap: 5px;
   border: none;
+}
+
+.search-form__checklist {
+  padding-bottom: 3px;
 }
 
 .search-form__fieldset-title {
@@ -140,7 +148,8 @@ ol {
 
 .search-form__label {
   display: flex;
-  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
   gap: 5px;
 }
 
@@ -160,7 +169,7 @@ ol {
   overflow: hidden;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  white-space: nowrap;
+  
 }
 
 .search-form__pseudo-checkbox {
@@ -243,15 +252,9 @@ ol {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
   overflow: auto;
   position: relative;
 }
-
-.content__list::-webkit-scrollbar {
-  visibility: hidden;
-  width: 0px;
-  }
 
 .content__list-item {
   width: 100%;
@@ -306,6 +309,10 @@ ol {
   font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 192px;
 }
 
 .content__video-card-description {
@@ -320,7 +327,6 @@ ol {
   width: 194px;
   height: 103px;
   object-position: center;
-  background-size: cover;
 }
 
 .more-button {

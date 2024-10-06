@@ -38,10 +38,6 @@ ol {
   list-style: none;
 }
 
-li:not(:last-child) {
-  padding-bottom: 30px;
-}
-
 .content {
   display: flex;
   justify-content: center;
@@ -148,8 +144,7 @@ li:not(:last-child) {
 
 .search-form__label {
   display: flex;
-  align-content: center;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 5px;
 }
 
@@ -260,6 +255,10 @@ li:not(:last-child) {
   width: 100%;
 }
 
+.content__list-item:not(:last-child) {
+  padding-bottom: 30px;
+}
+
 .content__card-link {
   display: block;
   text-decoration: none;
@@ -324,6 +323,7 @@ li:not(:last-child) {
 }
 
 .content__video-card-thumbnail {
+  background-size: cover;
   width: 194px;
   height: 103px;
   object-position: center;
